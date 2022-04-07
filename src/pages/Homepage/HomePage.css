@@ -1,0 +1,15 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Montserrat' !important; 
+}
+
+#home-page {
+  background-color: rgb(36, 36, 36);
+  color: white;
+  height: calc(100vh);
+}
+
+.fill {
+	color: red;
+}
