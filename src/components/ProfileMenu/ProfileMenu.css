@@ -6,8 +6,7 @@
     padding: 1em;
 }
 
-
 .profile-picture {
-    border: none !important;
-    border-color: transparent;
+    width: 100%;
+    border-radius: 50%;
 }

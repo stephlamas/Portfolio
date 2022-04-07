@@ -10,15 +10,22 @@ const ProfileMenu = () => {
     <>
       <Row>
         <Col>
-          <Image className="mt-3 mb-3 profile-picture" src="../../../images/EstefaniaL_square.jpg" roundedCircle thumbnail/>
+          <Image
+            className="mt-3 mb-3 profile-picture"
+            src="../../../images/EstefaniaL_square.jpg"
+          />
         </Col>
       </Row>
       <Row className="box mb-3">
-        <Col><span>Estefanía Lamas</span></Col>
+        <Col>
+          <span>Estefanía Lamas</span>
+        </Col>
       </Row>
       <Row className="box">
         <Col>
-            <span><BsGithub /> Github</span>
+          <span>
+            <BsGithub /> Github
+          </span>
         </Col>
       </Row>
     </>
