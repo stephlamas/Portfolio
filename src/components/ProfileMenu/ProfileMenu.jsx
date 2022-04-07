@@ -2,13 +2,14 @@ import { Row, Col } from "react-bootstrap";
 import './ProfileMenu.css'
 import "bootstrap/dist/css/bootstrap.css";
 import Image from "react-bootstrap/Image";
-import { BsGithub } from "react-icons/bs";
+import { BsGithub, BsLinkedin, BsPersonCircle } from "react-icons/bs";
+import { HiOutlineMail } from "react-icons/hi";
 
 
 const ProfileMenu = () => {
   return (
     <>
-      <Row>
+      <Row className="mt-4 ms-9">
         <Col>
           <Image
             className="mt-3 mb-3 profile-picture"
@@ -18,13 +19,27 @@ const ProfileMenu = () => {
       </Row>
       <Row className="box mb-3">
         <Col>
-          <span>Estefanía Lamas</span>
+          <span> <BsPersonCircle /> Estefanía Lamas</span>
+        </Col>
+      </Row>
+      <Row className="box mb-3">
+        <Col>
+          <span>
+            <BsGithub /> Github
+          </span>
+        </Col>
+      </Row>
+      <Row className="box mb-3">
+        <Col>
+          <span>
+            <BsLinkedin /> LinkedIn
+          </span>
         </Col>
       </Row>
       <Row className="box">
         <Col>
           <span>
-            <BsGithub /> Github
+            <HiOutlineMail /> esteflamas@gmail.com
           </span>
         </Col>
       </Row>
