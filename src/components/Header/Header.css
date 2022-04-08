@@ -1,0 +1,36 @@
+.welcome {
+    text-align: center;
+    font-family: 'Montserrat';
+    margin-top: 5em;
+}
+
+.name{
+    text-align: center;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 2em;
+    margin-top: .7em;
+}
+
+.self-title {
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: .9em;
+    font-weight: bold;
+    color: rgb(225, 0, 255);
+    margin-top: .7em;
+}
+
+.self-definition {
+    text-align: center;
+    font-family: 'Montserrat';
+    margin-top: .7em;
+}
+
+.ironhack-logo {
+    width: 40px;
+}
+
+.photographer {
+     margin-top: 1.6em;
+}

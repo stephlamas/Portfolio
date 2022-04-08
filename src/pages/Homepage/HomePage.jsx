@@ -1,7 +1,8 @@
 import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import "./HomePage.css";
 import ProfileMenu from "../../components/ProfileMenu/ProfileMenu";
-import { Container, Row, Col } from "react-bootstrap";
+import Header from "../../components/Header/Header";
 
 const HomePage = () => {
   return (
@@ -12,7 +13,7 @@ const HomePage = () => {
             <ProfileMenu />
           </Col>
           <Col>
-            <div className="fill"></div>
+            <Header />
           </Col>
         </Row>
       </Container>
