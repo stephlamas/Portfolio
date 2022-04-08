@@ -1,12 +1,12 @@
 import { Row, Col } from "react-bootstrap";
-import './ProfileMenu.css'
+import './ProfileCard.css'
 import "bootstrap/dist/css/bootstrap.css";
 import Image from "react-bootstrap/Image";
 import { BsGithub, BsLinkedin, BsPersonCircle } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
 
 
-const ProfileMenu = ({ name, photoPath, emailAddress }) => {
+const ProfileMenu = ({ name = 'no name', photoPath, emailAddress = 'no email address'}) => {
   return (
     <>
       <Row className="mt-4 ms-9">

@@ -1,4 +1,4 @@
-import ProfileMenu from "../ProfileMenu/ProfileMenu";
+import ProfileMenu from "../ProfileCard/ProfileCard";
 
 const StephProfile = () => {
     return (
