@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./HomePage.css";
-import ProfileMenu from "../../components/ProfileMenu/ProfileMenu";
+import StephProfile from "../../components/StephProfile/StephProfile";
 import Header from "../../components/Header/Header";
 
 const HomePage = () => {
@@ -10,7 +10,7 @@ const HomePage = () => {
       <Container fluid>
         <Row>
           <Col lg={{ span: 2 }} md={{ span: 4 }} className="ms-4">
-            <ProfileMenu />
+            <StephProfile />
           </Col>
           <Col>
             <Header />

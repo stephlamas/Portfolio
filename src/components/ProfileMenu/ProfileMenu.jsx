@@ -6,14 +6,14 @@ import { BsGithub, BsLinkedin, BsPersonCircle } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
 
 
-const ProfileMenu = () => {
+const ProfileMenu = ({ name, photoPath, emailAddress }) => {
   return (
     <>
       <Row className="mt-4 ms-9">
         <Col>
           <Image
             className="mt-3 mb-3 profile-picture"
-            src="../../../images/EstefaniaL_square.jpg"
+            src={ photoPath }
           />
         </Col>
       </Row>
@@ -21,7 +21,7 @@ const ProfileMenu = () => {
         <Col>
           <span>
             {" "}
-            <BsPersonCircle /> Estefanía Lamas
+            <BsPersonCircle /> { name }
           </span>
         </Col>
       </Row>
@@ -42,7 +42,7 @@ const ProfileMenu = () => {
       <Row className="box">
         <Col>
           <span>
-            <HiOutlineMail /> esteflamas@gmail.com
+            <HiOutlineMail /> { emailAddress }
           </span>
         </Col>
       </Row>

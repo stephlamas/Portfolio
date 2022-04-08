@@ -1,5 +1,9 @@
+:root {
+  --theme-background-color: rgb(36, 36, 36)
+}
+
 #home-page {
-  background-color: rgb(36, 36, 36);
+  background-color: var(--theme-background-color);
   color: white;
   height: calc(100vh);
 }
