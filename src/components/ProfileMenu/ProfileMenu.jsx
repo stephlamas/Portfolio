@@ -19,13 +19,16 @@ const ProfileMenu = () => {
       </Row>
       <Row className="box mb-3">
         <Col>
-          <span> <BsPersonCircle /> Estefanía Lamas</span>
+          <span>
+            {" "}
+            <BsPersonCircle /> Estefanía Lamas
+          </span>
         </Col>
       </Row>
       <Row className="box mb-3">
         <Col>
           <span>
-            <BsGithub /> Github
+            <BsGithub /> <a href="www.github.com">Github</a>
           </span>
         </Col>
       </Row>
