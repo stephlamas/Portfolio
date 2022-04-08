@@ -1,6 +1,6 @@
 import { Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
-import './Header.css'
+import './StephsCV.css'
 
 const Header = () => {
   return (
@@ -8,7 +8,7 @@ const Header = () => {
       <div className="welcome">Hi there 👋 I'm</div>
       <p className="name">Estefanía Lamas</p>
       <p className="self-title">
-        WEB DEVELOPER & TRANSLATOR </p> <br /> <br />
+        WEB DEVELOPER & TRANSLATOR </p> 
         <p className="language-logos"><img className="language-logo" src="../../../images/react.png" alt="" />
         <img
           className="language-logo"

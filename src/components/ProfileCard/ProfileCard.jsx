@@ -6,43 +6,52 @@ import { BsGithub, BsLinkedin, BsPersonCircle } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
 
 
-const ProfileMenu = ({ name = 'no name', photoPath, emailAddress = 'no email address'}) => {
+const ProfileMenu = ({
+  name = "no name",
+  photoPath,
+  emailAddress = "no email address",
+  linkedinProfileName,
+  githubProfileName,
+}) => {
+  const linkedinUrlFor = (p) => `https://www.linkedin.com/in/${p}`;
+  const githubUrlFor = (p) => `https://github.com/${p}`;
+
   return (
     <>
       <Row className="mt-4 ms-9">
         <Col>
-          <Image
-            className="mt-3 mb-3 profile-picture"
-            src={ photoPath }
-          />
+          <Image className="mt-3 mb-3 profile-picture" src={photoPath} />
         </Col>
       </Row>
       <Row className="box mb-3">
         <Col>
           <span>
             {" "}
-            <BsPersonCircle /> { name }
+            <BsPersonCircle /> {name}
           </span>
         </Col>
       </Row>
       <Row className="box mb-3">
         <Col>
           <span>
-            <BsGithub /> <a href="www.github.com">Github</a>
+            <BsGithub /> <a href={githubUrlFor(githubProfileName)}>Github</a>
           </span>
         </Col>
       </Row>
-      <Row className="box mb-3">
-        <Col>
-          <span>
-            <BsLinkedin /> LinkedIn
-          </span>
-        </Col>
-      </Row>
+      {linkedinProfileName && (
+        <Row className="box mb-3">
+          <Col>
+            <span>
+              <BsLinkedin />{" "}
+              <a href={linkedinUrlFor(linkedinProfileName)}>LinkedIn</a>
+            </span>
+          </Col>
+        </Row>
+      )}
       <Row className="box">
         <Col>
           <span>
-            <HiOutlineMail /> { emailAddress }
+            <HiOutlineMail /> {emailAddress}
           </span>
         </Col>
       </Row>

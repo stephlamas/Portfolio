@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./HomePage.css";
 import StephProfile from "../../components/StephsProfile/StephsProfile";
-import Header from "../../components/Header/Header";
+import Header from "../../components/StephsCV/StephsCV";
 
 const HomePage = () => {
   return (
