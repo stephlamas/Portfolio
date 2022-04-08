@@ -2,59 +2,35 @@ import { Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import './StephsCV.css'
 
-const Header = () => {
+const StephsCV = () => {
+
+  const images = [
+    "../../../images/javascript.png",
+    "../../../images/react.png",
+    "../../../images/mongodb.png",
+    "../../../images/nodejs.png",
+    "../../../images/express.png",
+    "../../../images/html.png",
+    "../../../images/css.png",
+    "../../../images/bootstrap.png",
+  ];
+
   return (
-    <>
+    <div>
       <div className="welcome">Hi there 👋 I'm</div>
       <p className="name">Estefanía Lamas</p>
       <p className="self-title">WEB DEVELOPER & TRANSLATOR </p>
-      <p className="language-logos">
-        <img className="language-logo" src="../../../images/react.png" alt="" />
-        <img
-          className="language-logo"
-          src="../../../images/javascript.png"
-          alt=""
-        />
-        <img
-          className="language-logo"
-          src="../../../images/mongodb.png"
-          alt=""
-        />
-        <img
-          className="language-logo"
-          src="../../../images/nodejs.png"
-          alt=""
-        />
-        <img
-          className="language-logo"
-          src="../../../images/express.png"
-          alt=""
-        />
-        <img className="language-logo" src="../../../images/html.png" alt="" />
-        <img className="language-logo" src="../../../images/css.png" alt="" />
-        <img
-          className="language-logo"
-          src="../../../images/bootstrap.png"
-          alt=""
-        />
-      </p>
-      <div className="self-definition">
-        <p>
-          <img
-            className="ironhack-logo"
-            src="../../../images/ironhack.svg"
-            alt=""
-          />{" "}
-          Ironhack graduate web developer
-        </p>
-        <p className="translator">
-          <img className="language-logo" src="../../../images/translating.png" alt="" />{" "}
-          English-Spanish translator{" "}
-        </p>
-        <p className="photographer">📸 Part-time photograher</p>
+      <div className="language-logos">
+        { images.map(i => <img src={i} width="40px" /> ) }
       </div>
-    </>
+
+      <div className="self-definition">
+        <p>Ironhack graduate web developer </p>
+        <p> English-Spanish translator</p>
+        <p> Part-time photograher </p>
+      </div>
+    </div>
   );
 };
 
-export default Header;
+export default StephsCV;
