@@ -20,15 +20,13 @@ const StephsCV = () => {
       <div className="welcome">Hi there 👋 I'm</div>
       <p className="name">Estefanía Lamas</p>
       <p className="self-title">WEB DEVELOPER & TRANSLATOR </p>
+      <div className="self-definition">
+        <p>Ironhack graduate web developer ⭐️ English-Spanish translator ⭐️ Part-time photograher </p>
+      </div>
       <div className="language-logos">
         { images.map(i => <img src={i} width="40px" /> ) }
       </div>
 
-      <div className="self-definition">
-        <p>Ironhack graduate web developer </p>
-        <p> English-Spanish translator</p>
-        <p> Part-time photograher </p>
-      </div>
     </div>
   );
 };

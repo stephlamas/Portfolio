@@ -1,8 +1,7 @@
 #home-page {
-  height: calc(100vh);
+  min-height: calc(100vh);
   color: var(--font-color);
-  background-color: var(--theme-background-color);
-  background: var(--theme-background-color);
+  background-image: var(--theme-background-color);
 }
 
 

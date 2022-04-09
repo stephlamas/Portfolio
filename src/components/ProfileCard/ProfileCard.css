@@ -21,6 +21,7 @@
 @media (max-width: 768px) {
   .box {
       width: 90%;
+      text-align: center;
   }
   .profile-picture {
       width: 85%;

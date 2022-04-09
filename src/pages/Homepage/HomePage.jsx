@@ -7,18 +7,16 @@ import StephsCV from "../../components/StephsCV/StephsCV";
 
 const HomePage = () => {
   return (
-    <div id="home-page">
-      <Container fluid>
-        <Row>
-          <Col lg={{ span: 2 }} md={{ span: 4 }} className="ms-4">
-            <StephProfile />
-          </Col>
-          <Col lg={{ span:6, offset: 1}}>
-            <StephsCV />
-          </Col>
-        </Row>
-      </Container>
-    </div>
+    <Container id="home-page" fluid>
+      <Row>
+        <Col md={{ span: 2 }} sm={{ span: 4 }} className="ms-4">
+          <StephProfile />
+        </Col>
+        <Col md={{ span: 6, offset: 1 }} sm={{ span: 6 }}>
+          <StephsCV />
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

@@ -8,7 +8,7 @@
     font-family: 'Montserrat';
     font-weight: bold;
     font-size: 2.2em;
-    margin-top: .7em;
+    margin-top: .3em;
 }
 
 .self-title {
@@ -21,11 +21,13 @@
 
 .self-definition {
     font-family: 'Montserrat';
-    margin-top: .7em;
+    margin-top: 1.5em;
+    color: rgb(26, 26, 26);
+    font-size: 90%;
 }
 
 .language-logos {
-    margin-top: 3%;
+    margin-top: 4%;
     background-color: rgba(255, 255, 255, 0.219);
     padding: 2%;
     border: 1px solid rgba(250, 253, 255, 0.18);
@@ -35,4 +37,20 @@
 
 .language-logos img {
     flex: 1;
+}
+
+@media (max-width: 768px) {
+  .welcome {
+      text-align: center;
+    } 
+  .name {
+      text-align: center;
+    } 
+  .self-title{
+      text-align: center;
+    } 
+  .self-definition {
+      text-align: center;
+      margin-bottom: 1.8em;
+    }
 }
