@@ -1,0 +1,49 @@
+{
+	"personal": {
+		"name": {
+			"first": "Estefanía",
+			"family1": "Lamas",
+			"family2": "Neira"
+		},
+		"profession": "Translator and software developer",
+		"contact": {
+			"email": "esteflamas@gmail.com"
+		},
+		"residence": {
+			"city": "Vigo",
+			"country": "ES"
+		},
+		"social": {
+			"github": "stephlamas",
+			"linkedin": "estefania-lamas"
+		}
+	},
+	"works": [
+		{
+			"company": "The Geroge Hotel",
+			"start": "2015-10-10",
+			"end": "2018-06-01",
+			"role": "Waitress",
+			"description": "An awesome job"
+		}
+	],
+	"education": [
+		{
+			"institution": "Unviersidad de Vigo",
+			"end": 2015,
+			"degree": "Grado en Traducción e Interpretación"
+		}
+	],
+	"skills": {
+		"technologies": {
+			"JavaScript": 3,
+			"React": 3.5,
+			"express": 3,
+			"mongodb": 3.5,
+			"node": 3,
+			"HTML5": 5,
+			"CSS3": 4,
+			"Photoshop": 5
+		}
+	}
+}
