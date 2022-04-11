@@ -1,15 +1,14 @@
 import { Row, Col } from "react-bootstrap";
-import './ProfileCard.css'
+import "./ProfileCard.css";
 import "bootstrap/dist/css/bootstrap.css";
 import Image from "react-bootstrap/Image";
 import { BsGithub, BsLinkedin, BsPersonCircle } from "react-icons/bs";
 import { HiOutlineMail } from "react-icons/hi";
 
-
-const ProfileMenu = ({
-  name = "no name",
+const ProfileCard = ({
+  name,
   photoPath,
-  emailAddress = "no email address",
+  emailAddress,
   linkedinProfileName,
   githubProfileName,
 }) => {
@@ -18,45 +17,46 @@ const ProfileMenu = ({
 
   return (
     <>
-      <Row className="mt-4 ms-9">
+      <Row className="mt-4 ms-9 box">
         <Col>
-          <Image className="mt-3 mb-3 profile-picture" src={photoPath} />
-        </Col>
-      </Row>
-      <Row className="box mb-3">
-        <Col>
-          <span>
+          <Image
+            className="mt-3 mb-3 profile-picture"
+            src={photoPath}
+            alt={`${name}`}
+          />
+          <span className="d-inline-block">
             {" "}
             <BsPersonCircle /> {name}
-          </span>
-        </Col>
-      </Row>
-      <Row className="box mb-3">
-        <Col>
-          <span>
-            <BsGithub /> <a href={githubUrlFor(githubProfileName)}>Github</a>
-          </span>
-        </Col>
-      </Row>
-      {linkedinProfileName && (
-        <Row className="box mb-3">
-          <Col>
+          </span>{" "}
+          <br />
+          {emailAddress && (
             <span>
-              <BsLinkedin />{" "}
-              <a href={linkedinUrlFor(linkedinProfileName)}>LinkedIn</a>
+              <a href={"mailto:" + emailAddress}>
+                <HiOutlineMail /> {emailAddress}
+              </a>
             </span>
-          </Col>
-        </Row>
-      )}
-      <Row className="box">
-        <Col>
-          <span>
-            <HiOutlineMail /> {emailAddress}
-          </span>
+          )}
+          <br />
+          {githubProfileName && (
+            <span>
+              <BsGithub />{" "}
+              <a href={githubUrlFor(githubProfileName)}> {githubProfileName}</a>
+            </span>
+          )}
+          <br />
+          {linkedinProfileName && (
+            <span>
+              <BsLinkedin />
+              <a href={linkedinUrlFor(linkedinProfileName)}>
+                {" "}
+                {linkedinProfileName}
+              </a>
+            </span>
+          )}
         </Col>
       </Row>
     </>
   );
 };
 
-export default ProfileMenu;
+export default ProfileCard;

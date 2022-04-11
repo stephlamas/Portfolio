@@ -1,12 +1,16 @@
+import React from "react";
 import { Routes, Route } from "react-router-dom";
-import HomePage from "../pages/Homepage/HomePage";
+import Portfolio from "../pages/Portfolio/Portfolio";
 
 const AppRoutes = () => {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="*" element={<h1>404 Page not found</h1>} />
-    </Routes>
+     <Routes>
+       <Route path="/" element={<Portfolio />} />
+        <Route path="/not-found" element= { <h1>NOT FOUND</h1> } />        
+        <Route path="/unexpected-error" element= { <h1>UNEXPECTED ERROR</h1> } /> 
+     </Routes>
   );
 };
 export default AppRoutes;
+
+
