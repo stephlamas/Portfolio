@@ -9,3 +9,31 @@
 }
 
 
+.project-box {
+    background-color: rgba(255, 255, 255, 0.329);
+    border-radius: 20px;
+    padding: 1em;
+    font-size: 14px;
+    font-family: 'Montserrat';
+    hyphens: auto;
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border: 1px solid rgba(250, 253, 255, 0.18);
+    backdrop-filter: blur(10px);
+    font-size: .9em;
+}
+
+@media (max-width: 768px) {
+  .project-box {
+      width: 60px;
+      text-align: center;
+      font-size: 1em;
+  }
+}
+
+@media (min-width: 992px) {
+.project-box {
+  
+    width: 35%;
+}
+}

@@ -9,6 +9,7 @@ import portfolioService from "../../services/portfolio.service";
 import Introduction from "../../components/Introduction/Introduction";
 import Showcase from "../../components/Showcase/Showcase";
 import Project from "../../components/Project/Project";
+import Skills from "../../components/Skills/Skills";
 
 const Portfolio = () => {
   const images = [
@@ -32,9 +33,9 @@ const Portfolio = () => {
 
   return (
     profile && (
-      <Container id="home-page" fluid>
+      <Container id="home-page" fluid className="ps-5 pe-5">
         <Row>
-          <Col lg={{ span: 3 }} md={{ span: 6 }} className="ms-4">
+          <Col lg={{ span: 3 }} md={{ span: 6 }}>
             <ProfileCard
               name={profile.name}
               photoPath={profile.photoUrl}
@@ -56,14 +57,22 @@ const Portfolio = () => {
         <Row>
           <Col>
             <Showcase theme={profile.showcaseTheme}>
-              {profile.showcaseProjects.map((e, index) => (
-                <Col key={index} sm={6} lg={4} className="box">
-                  <Project title={e.title} description={e.description} technologies={e.technologies} />
-                </Col>
-              ))}
+              <Row xs={1} md={2} lg={3} className="g-md-3 g-lg-5">
+                {profile.showcaseProjects.map((e, index) => (
+                  <Col key={index} className="project-box p-3">
+                    <Project
+                      title={e.title}
+                      description={e.description}
+                      technologies={e.technologies}
+                      photo={e.projectPhoto}
+                    />
+                  </Col>
+                ))}
+              </Row>
             </Showcase>
           </Col>
         </Row>
+        <Skills />
       </Container>
     )
   );
