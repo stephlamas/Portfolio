@@ -7,7 +7,7 @@ const person = {
   githubUser: "stephlamas",
   photoUrl: "images/EstefaniaL_square.jpg",
   aboutMe:
-    "Ironhack graduate web developer ⭐️ English-Spanish translator ⭐️ Part-time photograher",
+    "Ironhack graduate web developer | English-Spanish translator | Part-time photograher",
   profession: "WEB DEVELOPER & TRANSLATOR",
   showcaseTheme: "My Ironhack projects",
   showcaseProjects: [

@@ -1,6 +1,6 @@
 .welcome {
     font-family: 'Montserrat';
-    margin-top: 7em;
+    margin-top: 3em;
     font-size: 1.2em;
 }
 
@@ -16,7 +16,7 @@
     font-size: 1em;
     font-weight: bold;
     color: rgb(24, 24, 24);
-    margin-top: .7em;
+    margin-top: .5em;
 }
 
 .self-definition {

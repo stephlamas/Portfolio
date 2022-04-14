@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { motion } from "framer-motion";
+
 import "./light.css";
 import "./Portfolio.css";
 import ProfileCard from "../../components/ProfileCard/ProfileCard";
@@ -23,6 +25,7 @@ const Portfolio = () => {
     "../../../images/bootstrap.png",
   ];
   const [profile, setProfile] = useState();
+
 
   useEffect(() => {
     portfolioService
