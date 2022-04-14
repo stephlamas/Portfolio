@@ -57,24 +57,21 @@ const Portfolio = () => {
             </div>
           </Col>
         </Row>
-        <Row>
-          <Col>
-            <Showcase theme={profile.showcaseTheme}>
-              <Row xs={1} md={2} lg={3} className="g-md-3 g-lg-5">
-                {profile.showcaseProjects.map((e, index) => (
-                  <Col key={index} className="project-box p-3">
-                    <Project
-                      title={e.title}
-                      description={e.description}
-                      technologies={e.technologies}
-                      photo={e.projectPhoto}
-                    />
-                  </Col>
-                ))}
-              </Row>
-            </Showcase>
-          </Col>
-        </Row>
+        <Showcase theme={profile.showcaseTheme}>
+          <Row xs={1} md={2} lg={3} className="g-md-3 g-lg-5">
+            {profile.showcaseProjects.map((e, index) => (
+              <Col key={index} className="project-box p-3">
+                <Project
+                  title={e.title}
+                  description={e.description}
+                  technologies={e.technologies}
+                  photo={e.projectPhoto}
+                />
+              </Col>
+            ))}
+          </Row>
+        </Showcase>
+
         <Skills />
       </Container>
     )
