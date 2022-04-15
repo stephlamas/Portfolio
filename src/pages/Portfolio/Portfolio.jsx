@@ -26,12 +26,11 @@ const Portfolio = () => {
   ];
   const [profile, setProfile] = useState();
 
-
   useEffect(() => {
     portfolioService
       .findProfileByName("elamas")
-      .then(r => setProfile(r))
-      .catch(err => console.log(err));
+      .then((r) => setProfile(r))
+      .catch((err) => console.log(err));
   }, []);
 
   return (
@@ -58,18 +57,18 @@ const Portfolio = () => {
           </Col>
         </Row>
         <Showcase theme={profile.showcaseTheme}>
-          <Row xs={1} md={2} lg={3} className="g-md-3 g-lg-5">
+          <div className="div-box">
             {profile.showcaseProjects.map((e, index) => (
-              <Col key={index} className="project-box p-3">
+              <div key={index} className="project-box p-3">
                 <Project
                   title={e.title}
                   description={e.description}
                   technologies={e.technologies}
                   photo={e.projectPhoto}
                 />
-              </Col>
+              </div>
             ))}
-          </Row>
+          </div>
         </Showcase>
 
         <Skills />
@@ -77,6 +76,5 @@ const Portfolio = () => {
     )
   );
 };
-
 
 export default Portfolio;

@@ -13,7 +13,7 @@
     background-color: rgba(255, 255, 255, 0.329);
     border-radius: 20px;
     padding: 1em;
-    font-size: 14px;
+    font-size: 12px;
     font-family: 'Montserrat';
     hyphens: auto;
     backdrop-filter: blur( 4px );
@@ -21,20 +21,41 @@
     border: 1px solid rgba(250, 253, 255, 0.18);
     backdrop-filter: blur(10px);
     font-size: .9em;
-    width: 100px;
 }
+
+  .div-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+  }
+
 
 @media (max-width: 768px) {
   .project-box {
-      width: 60px;
       text-align: center;
       font-size: 1em;
+      margin-bottom: 1em;
   }
 }
 
 @media (min-width: 992px) {
 .project-box {
-  
-    width: 35%;
+    width: 32%;
 }
+}
+
+
+@media (max-width: 768px) {
+  .div-box {
+   display: flex;
+	 flex-direction: column;
+	 flex-wrap: nowrap;
+	 justify-content: center;
+	 align-items: center;
+	 align-content: space-evenly;
+   
+  }
 }

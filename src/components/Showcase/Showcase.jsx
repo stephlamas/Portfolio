@@ -5,13 +5,8 @@ import './Showcase.css'
 const Showcase = ({ theme, children }) => {
   return (
     <>
-        <Row>
-            <Col>
-                <p className="theme-title mt-3">
-                    <AiOutlineFundProjectionScreen /> {theme}
-                </p>
-            </Col>
-        </Row>
+        <p className="theme-title mt-3">
+         <AiOutlineFundProjectionScreen /> {theme} </p>
         {children}
     </>
   );
