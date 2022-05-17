@@ -3,7 +3,14 @@ import "./Header.css";
 import CTA from "./CTA";
 import HeaderSocials from "./HeaderSocials"
 
-const Header = ({ name, title, photoPath }) => {
+const Header = ({
+  name,
+  title,
+  photoPath,
+  linkedinProfileName,
+  githubProfileName,
+  emailAddress
+}) => {
   return (
     <header>
       <div className="container header__container">
@@ -11,7 +18,11 @@ const Header = ({ name, title, photoPath }) => {
         <h1>{name}</h1>
         <h5>{title}</h5>
         <CTA />
-        <HeaderSocials />
+        <HeaderSocials
+          linkedinProfileName={linkedinProfileName}
+          githubProfileName={githubProfileName}
+          emailAddress={emailAddress}
+        />
 
         <div className="me">
           <img src={photoPath} alt={`${name}`} />

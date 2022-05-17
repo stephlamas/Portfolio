@@ -57,24 +57,33 @@ header {
 /* MEDIUM DEVICES */
 @media screen and (max-width: 1024px) {
   header {
-    height: 68vh;
+    height: 100vh;
   }
 }
+
 
 /* SMALL DEVICES */
 @media screen and (max-width: 600px) {
   header {
     height: 100vh;
-    /* added after tutorial */
     padding-top: 4rem;
   }
 
-  .header__socials,
+  .header__socials {
+    display: inline;
+    top: 4em;
+    position: relative;
+  }
+
+  .header__socials a {
+    padding: 1.5em;
+  }
+
   .scroll__down {
     display: none;
   }
 
-  /* added after tutorial */
+
   .me {
     width: 94%;
     max-width: 20rem;
@@ -82,7 +91,7 @@ header {
     justify-content: center;
   }
 
-  /* added after tutorial */
+
   .cta {
     margin-top: 1.7rem;
     gap: 1rem;

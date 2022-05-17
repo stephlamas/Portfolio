@@ -1,4 +1,3 @@
-import axios from "axios";
 
 const person = {
   name: "Estefanía Lamas",
@@ -6,10 +5,11 @@ const person = {
   linkedinUser: "estefania-lamas",
   githubUser: "stephlamas",
   photoUrl: "images/EstefaniaL_square.jpg",
+  photoAboutMe: "images/lofi_girl.jpg",
   aboutMe:
     "Ironhack graduate web developer | English-Spanish translator | Part-time photograher",
   profession: "WEB DEVELOPER & TRANSLATOR",
-  skills : [
+  skills: [
     "../../../images/javascript.png",
     "../../../images/react.png",
     "../../../images/mongodb.png",
@@ -23,21 +23,31 @@ const person = {
   showcaseProjects: [
     {
       title: "Homie",
-      description: "Homie is an app focused on the search of living places for rent globally, similar to AirBnb. You can find the possibility of filtering these places by city, condition, category or bedrooms.",
-      technologies: "React, MongoDB, Express, NodeJS, Postman, Cloudinary, HTML, CSS",
+      description:
+        "Homie is an app focused on the search of living places for rent globally, similar to AirBnb. You can find the possibility of filtering these places by city, condition, category or bedrooms.",
+      technologies:
+        "React, MongoDB, Express, NodeJS, Postman, Cloudinary, HTML, CSS",
       projectPhoto: "images/homie-screenshot.jpg",
+      githubUrl: "https://github.com/stephlamas/homie-searcher-client",
+      demo: "https://homieapp.netlify.app/",
     },
     {
       title: "Tortuga, beach locator",
-      description: "Spanish beach locator. The second project for Ironhack Web Development Bootcamp. A beach locator of Spanish beaches filtering by name or location and giving information of each beach.",
-      technologies: "Express, NodeJs, MongoDB, Handlebars, HTML, CSS, Beach Api Rest, GoogleMaps API, Cloudinary",
+      description:
+        "Spanish beach locator. The second project for Ironhack Web Development Bootcamp. A beach locator of Spanish beaches filtering by name or location and giving information of each beach.",
+      technologies:
+        "Express, NodeJs, MongoDB, Handlebars, HTML, CSS, Beach Api Rest, GoogleMaps API, Cloudinary",
       projectPhoto: "images/tortuga-screenshot.jpg",
+      githubUrl: "https://github.com/emenocal07/project-beachApp",
+      demo: "https://tortuga-beach-locator.herokuapp.com/",
     },
     {
       title: "Space Dodger",
       description: "Videogame made with canvas at Ironhack Madrid.",
       technologies: "JavaScript",
       projectPhoto: "images/spacedodgerscreenshot.jpg",
+      githubUrl: "https://github.com/stephlamas/videogrameproyect",
+      demo: "https://stephlamas.github.io/videogrameproyect/",
     },
   ],
 };

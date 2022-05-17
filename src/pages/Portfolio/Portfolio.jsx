@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
 
 import "./Portfolio.css";
 import portfolioService from "../../services/portfolio.service";
@@ -24,47 +23,32 @@ const Portfolio = () => {
 
   return (
     profile && (
-      <Container id="home-page" fluid className="ps-5 pe-5">
-      <Header 
-      name={profile.name}
-      title={profile.profession}
-      photoPath={profile.photoUrl} 
-      />
-        <Navigation />
-        <AboutMe 
-        photoPath={profile.photoUrl}
+      <>
+        <Header
+          name={profile.name}
+          title={profile.profession}
+          photoPath={profile.photoUrl}
+          linkedinProfileName={profile.linkedinUser}
+          githubProfileName={profile.githubUser}
+          emailAddress={profile.emailAddress}
         />
-        {/* <Row>
-        
-          <Col lg={{ span: 3 }} md={{ span: 6 }}>
-            <Introduction name={profile.name} />
-            <AboutMe
-              content={profile.aboutMe}
-              title={profile.profession}
-              emailAddress={profile.emailAddress}
-              linkedinProfileName={profile.linkedinUser}
-              githubProfileName={profile.githubUser}
-              photoPath={profile.photoUrl}
-            />
-          </Col>
-        </Row>
-        <Showcase theme={profile.showcaseTheme}>
-          <div className="div-box">
-            {profile.showcaseProjects.map((e, index) => (
-              <div key={index} className="project-box p-3">
-                <Project
-                  title={e.title}
-                  description={e.description}
-                  technologies={e.technologies}
-                  photo={e.projectPhoto}
-                />
-              </div>
-            ))}
-          </div>
-        </Showcase> */}
-
+        <Navigation />
+        <AboutMe photoPath={profile.photoUrl} />
         <Skills />
-      </Container>
+
+        {profile.showcaseProjects.map((e, index) => (
+          <div key={index}>
+            <Showcase
+              title={e.title}
+              description={e.description}
+              technologies={e.technologies}
+              photo={e.projectPhoto}
+              github={e.githubUrl}
+              demo={e.demo}
+            />
+          </div>
+        ))}
+      </>
     )
   );
 };
