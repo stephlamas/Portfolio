@@ -36,18 +36,28 @@ const Portfolio = () => {
         <AboutMe photoPath={profile.photoUrl} />
         <Skills />
 
-        {profile.showcaseProjects.map((e, index) => (
-          <div key={index}>
-            <Showcase
-              title={e.title}
-              description={e.description}
-              technologies={e.technologies}
-              photo={e.projectPhoto}
-              github={e.githubUrl}
-              demo={e.demo}
-            />
-          </div>
-        ))}
+        <Showcase>
+          {profile.showcaseProjects.map(p => (
+            <>
+   
+
+              <article key={p.title} className="showcase__item">
+                <div className="showcase__item-image">
+                  <img src={p.projectPhoto} alt={p.title} />
+                </div>
+                <h3>{p.title}</h3>
+                <div className="showcase__item-cta">
+                  <a href={p.github} className="btn">
+                    Github
+                  </a>
+                  <a href={p.demo} className="btn btn-primary">
+                    Live Demo
+                  </a>
+                </div>
+              </article>
+            </>
+          ))}
+        </Showcase>
       </>
     )
   );
