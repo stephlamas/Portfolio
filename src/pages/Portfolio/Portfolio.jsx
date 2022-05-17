@@ -1,29 +1,18 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { motion } from "framer-motion";
 
-import "./light.css";
 import "./Portfolio.css";
-import ProfileCard from "../../components/ProfileCard/ProfileCard";
-import AboutMe from "../../components/AboutMe/AboutMe";
-
 import portfolioService from "../../services/portfolio.service";
-import Introduction from "../../components/Introduction/Introduction";
+
+import Header from "../../components/Header/Header";
+import Navigation from "../../components/Navigation/Navigation";
+import AboutMe from "../../components/AboutMe/AboutMe";
 import Showcase from "../../components/Showcase/Showcase";
 import Project from "../../components/Project/Project";
 import Skills from "../../components/Skills/Skills";
 
 const Portfolio = () => {
-  const images = [
-    "../../../images/javascript.png",
-    "../../../images/react.png",
-    "../../../images/mongodb.png",
-    "../../../images/nodejs.png",
-    "../../../images/express.png",
-    "../../../images/html.png",
-    "../../../images/css.png",
-    "../../../images/bootstrap.png",
-  ];
+  
   const [profile, setProfile] = useState();
 
   useEffect(() => {
@@ -36,24 +25,27 @@ const Portfolio = () => {
   return (
     profile && (
       <Container id="home-page" fluid className="ps-5 pe-5">
-        <Row>
+      <Header 
+      name={profile.name}
+      title={profile.profession}
+      photoPath={profile.photoUrl} 
+      />
+        <Navigation />
+        <AboutMe 
+        photoPath={profile.photoUrl}
+        />
+        {/* <Row>
+        
           <Col lg={{ span: 3 }} md={{ span: 6 }}>
-            <ProfileCard
-              name={profile.name}
-              photoPath={profile.photoUrl}
+            <Introduction name={profile.name} />
+            <AboutMe
+              content={profile.aboutMe}
+              title={profile.profession}
               emailAddress={profile.emailAddress}
               linkedinProfileName={profile.linkedinUser}
               githubProfileName={profile.githubUser}
+              photoPath={profile.photoUrl}
             />
-          </Col>
-          <Col>
-            <Introduction name={profile.name} />
-            <AboutMe content={profile.aboutMe} title={profile.profession} />
-            <div className="language-logos">
-              {images.map((e, index) => (
-                <img src={e} key={index} width="40px" />
-              ))}
-            </div>
           </Col>
         </Row>
         <Showcase theme={profile.showcaseTheme}>
@@ -69,7 +61,7 @@ const Portfolio = () => {
               </div>
             ))}
           </div>
-        </Showcase>
+        </Showcase> */}
 
         <Skills />
       </Container>

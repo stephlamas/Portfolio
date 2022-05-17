@@ -9,6 +9,16 @@ const person = {
   aboutMe:
     "Ironhack graduate web developer | English-Spanish translator | Part-time photograher",
   profession: "WEB DEVELOPER & TRANSLATOR",
+  skills : [
+    "../../../images/javascript.png",
+    "../../../images/react.png",
+    "../../../images/mongodb.png",
+    "../../../images/nodejs.png",
+    "../../../images/express.png",
+    "../../../images/html.png",
+    "../../../images/css.png",
+    "../../../images/bootstrap.png",
+  ],
   showcaseTheme: "My Ironhack projects",
   showcaseProjects: [
     {
