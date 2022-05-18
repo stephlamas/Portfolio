@@ -7,8 +7,8 @@ import Header from "../../components/Header/Header";
 import Navigation from "../../components/Navigation/Navigation";
 import AboutMe from "../../components/AboutMe/AboutMe";
 import Showcase from "../../components/Showcase/Showcase";
-import Project from "../../components/Project/Project";
 import Skills from "../../components/Skills/Skills";
+import Footer from "../../components/Footer/Footer";
 
 const Portfolio = () => {
   
@@ -37,10 +37,8 @@ const Portfolio = () => {
         <Skills />
 
         <Showcase>
-          {profile.showcaseProjects.map(p => (
+          {profile.showcaseProjects.map((p) => (
             <>
-   
-
               <article key={p.title} className="showcase__item">
                 <div className="showcase__item-image">
                   <img src={p.projectPhoto} alt={p.title} />
@@ -58,6 +56,11 @@ const Portfolio = () => {
             </>
           ))}
         </Showcase>
+        <Footer
+          linkedinProfileName={profile.linkedinUser}
+          githubProfileName={profile.githubUser}
+          emailAddress={profile.emailAddress}
+        />
       </>
     )
   );

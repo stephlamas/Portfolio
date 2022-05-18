@@ -1,6 +1,6 @@
 import './Project.css'
 
-const Project = ({ title, description, technologies, photo }) => {
+const Project = () => {
   return (
     <>
       
