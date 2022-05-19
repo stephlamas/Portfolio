@@ -5,9 +5,10 @@ const person = {
   linkedinUser: "estefania-lamas",
   githubUser: "stephlamas",
   photoUrl: "images/EstefaniaL_square.jpg",
+  photoUrl2: "images/estefania_sm.jpeg",
   photoAboutMe: "images/lofi_girl.jpg",
   aboutMe:
-    "Ironhack graduate web developer | English-Spanish translator | Part-time photograher",
+    "I studied Web Development at Ironhack Madrid, a great place that has helped me discover a field in which I want to develop myself professionally and personally, so I'm focused on keeping learning everyday. I’m also a Translator & Interpreter and have a Bachelor's degree in Teaching English as a Second Language in Secondary Education, but, as life changes, I needed a change. I decided to make use of my level of English to make a career change where this language is so important, and start a new path as a web developer. In my free time, I dedicate myself to my favorite things: photography and my dog.",
   profession: "WEB DEVELOPER & TRANSLATOR",
   skills: [
     "../../../images/javascript.png",

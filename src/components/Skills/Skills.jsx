@@ -1,13 +1,21 @@
 import "./Skills.css";
 import { BsPatchCheckFill } from "react-icons/bs";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
-const Experience = () => {
+const Skills = () => {
+
+    useEffect(() => {
+      Aos.init({ duration: 1000 });
+    }, []);
+
   return (
     <section id="skills">
       <h2>My skills</h2>
 
       <div className="container skills__container">
-        <div className="skills__frontend">
+        <div className="skills__frontend" data-aos="fade-right">
           <h3>Frontend Development</h3>
           <div className="skills__content">
             <article className="skills__details">
@@ -56,7 +64,7 @@ const Experience = () => {
         </div>
         {/* END OF FRONTEND */}
 
-        <div className="skills__backend">
+        <div className="skills__backend" data-aos="fade-left">
           <h3>Backend Development</h3>
           <div className="skills__content">
             <article className="skills__details">
@@ -108,4 +116,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Skills;

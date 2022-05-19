@@ -8,7 +8,7 @@ const Footer = ({ linkedinProfileName, githubProfileName, emailAddress }) => {
   const githubUrlFor = (p) => `https://github.com/${p}`;
 
   return (
-    <footer>
+    <footer id="footer">
       <a href="#" className="footer__logo">
         My portfolio
       </a>

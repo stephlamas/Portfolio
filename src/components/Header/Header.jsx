@@ -1,7 +1,10 @@
-import React from "react";
 import "./Header.css";
 import CTA from "./CTA";
 import HeaderSocials from "./HeaderSocials"
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 
 const Header = ({
   name,
@@ -11,13 +14,18 @@ const Header = ({
   githubProfileName,
   emailAddress
 }) => {
+
+   useEffect(() => {
+     Aos.init({ duration: 1000 });
+   }, []);
+
   return (
     <header>
-      <div className="container header__container">
+      <div className="container header__container" data-aos="zoom-in">
         <h5>Hi there 👋 I'm</h5>
         <h1>{name}</h1>
         <h5>{title}</h5>
-        <CTA />
+        <CTA emailAddress={emailAddress} />
         <HeaderSocials
           linkedinProfileName={linkedinProfileName}
           githubProfileName={githubProfileName}
@@ -28,7 +36,7 @@ const Header = ({
           <img src={photoPath} alt={`${name}`} />
         </div>
 
-        <a href="#contact" className="scroll__down">
+        <a href="#footer" className="scroll__down">
           Scroll Down
         </a>
       </div>

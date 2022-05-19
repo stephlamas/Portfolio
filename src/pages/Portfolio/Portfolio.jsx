@@ -32,8 +32,8 @@ const Portfolio = () => {
           githubProfileName={profile.githubUser}
           emailAddress={profile.emailAddress}
         />
-        <Navigation />
-        <AboutMe photoPath={profile.photoUrl} />
+        <Navigation emailAddress={profile.emailAddress} />
+        <AboutMe photoPath={profile.photoUrl2} aboutMe={profile.aboutMe} />
         <Skills />
 
         <Showcase>
