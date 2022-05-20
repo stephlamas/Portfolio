@@ -12,8 +12,8 @@
 
 :root {
   --color-bg: #ffffff;
-  --color-bg-variant: #f8d0bd;
-  /* --color-bg-variant: #bdf9de; */
+  /* --color-bg-variant: #f8d0bd; */
+  --color-bg-variant: rgb(251, 212, 219);
   --color-primary: #b372ce;
   --color-primary-variant: rgb(16, 15, 16);
   --color-white: #fff;
@@ -67,7 +67,7 @@ section {
 section > h2,
 section > h5 {
   text-align: center;
-  color: var(--color-light);
+  color: var(--color-black);
 }
 
 section > h2 {

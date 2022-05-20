@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import "./Portfolio.css";
 import portfolioService from "../../services/portfolio.service";
@@ -8,6 +8,7 @@ import Navigation from "../../components/Navigation/Navigation";
 import AboutMe from "../../components/AboutMe/AboutMe";
 import Showcase from "../../components/Showcase/Showcase";
 import Skills from "../../components/Skills/Skills";
+import Contact from "../../components/Contact/Contact";
 import Footer from "../../components/Footer/Footer";
 
 const Portfolio = () => {
@@ -21,6 +22,11 @@ const Portfolio = () => {
       .catch((err) => console.log(err));
   }, []);
 
+  const homeRef = useRef();
+  const aboutMeRef = useRef();
+  const skillsRef = useRef();
+  const showCaseRef = useRef();
+
   return (
     profile && (
       <>
@@ -31,12 +37,25 @@ const Portfolio = () => {
           linkedinProfileName={profile.linkedinUser}
           githubProfileName={profile.githubUser}
           emailAddress={profile.emailAddress}
+          ref={homeRef}
         />
-        <Navigation emailAddress={profile.emailAddress} />
-        <AboutMe photoPath={profile.photoUrl2} aboutMe={profile.aboutMe} />
-        <Skills />
+        <Navigation
+          emailAddress={profile.emailAddress}
+          homeRef={homeRef}
+          aboutRef={aboutMeRef}
+          skillsRef={skillsRef}
+          showCaseRef={showCaseRef}
+        />
 
-        <Showcase>
+        <AboutMe
+          photoPath={profile.photoUrl2}
+          aboutMe={profile.aboutMe}
+          ref={aboutMeRef}
+        />
+
+        <Skills ref={skillsRef} />
+
+        <Showcase ref={showCaseRef}>
           {profile.showcaseProjects.map((p) => (
             <>
               <article key={p.title} className="showcase__item">
@@ -56,6 +75,7 @@ const Portfolio = () => {
             </>
           ))}
         </Showcase>
+        <Contact emailAddress={profile.emailAddress} />
         <Footer
           linkedinProfileName={profile.linkedinUser}
           githubProfileName={profile.githubUser}

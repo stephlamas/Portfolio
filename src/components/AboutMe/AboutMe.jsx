@@ -8,15 +8,14 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 
-const AboutMe = ({ photoPath, aboutMe }) => {
+const AboutMe = ({ photoPath, aboutMe, ref }) => {
 
     useEffect(() => {
       Aos.init({ duration: 1000 });
     }, []);
   return (
-    <section id="about">
-      <h5>Get To Know</h5>
-      <h2>About Me</h2>
+    <section id="about" forwardedRef={ref}>>
+      <h2>About me</h2>
 
       <div className="container about__container" data-aos="fade-right">
         <div className="about__me">

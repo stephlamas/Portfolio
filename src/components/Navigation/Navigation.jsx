@@ -5,66 +5,66 @@ import { BiBook } from "react-icons/bi";
 import { RiServiceLine } from "react-icons/ri";
 import { BiMessageSquareDetail } from "react-icons/bi";
 import { useState, useRef } from "react";
-// import useScrollSpy from "react-use-scrollspy";
+import Scrollspy from "react-scrollspy";
 
-const Nav = ({ emailAddress }) => {
+const Nav = ({ homeRef, aboutRef, skillsRef, showCaseRef }) => {
 
   const [activeNav, setActiveNav] = useState("#");
 
-  // const sectionRefs = [
-  //   useRef(null), 
-  //   useRef(null), 
-  //   useRef(null)
-  // ];
-
   // const activeSection = useScrollSpy({
-  //   sectionElementRefs: sectionRefs,
+  //   sectionElementRefs: [homeRef, aboutRef, skillsRef, showCaseRef],
   //   offsetPx: -80,
   // });
-
+  // console.log(activeSection);
 
   return (
-    <nav>
-      <a
-        href="#"
-        onClick={() => setActiveNav("#")}
-        className={activeNav === "#" ? "active" : ""}
-      
-      >
-        <AiOutlineHome />
-      </a>
-      <a
-        href="#about"
-        onClick={() => setActiveNav("#about")}
-        className={activeNav === "#about" ? "active" : ""}
- 
-      >
-        <AiOutlineUser />
-      </a>
-      <a
-        href="#skills"
-        onClick={() => setActiveNav("#skills")}
-        className={activeNav === "#skills" ? "active" : ""}
-   
-      >
-        <BiBook />
-      </a>
-      <a
-        href="#showcase"
-        onClick={() => setActiveNav("#showcase")}
-        className={activeNav === "#showcase" ? "active" : ""}
-  
-      >
-        <RiServiceLine />
-      </a>
-      <a
-        href={"mailto:" + emailAddress}
-        onClick={() => setActiveNav("#contact")}
-        className={activeNav === "#contact" ? "active" : ""}
-      >
-        <BiMessageSquareDetail />
-      </a>
-    </nav>
+    <Scrollspy
+      className="nav"
+      items={["about", "skills", "showcase", "contact"]}
+      currentClassName="isCurrent"
+    >
+      <nav>
+        <a
+          href="#"
+          onClick={() => setActiveNav("#")}
+          className={activeNav === "#" ? "active" : ""}
+          // className={activeSection == 0 ? "active" : ""}
+        >
+          <AiOutlineHome />
+        </a>
+        <a
+          href="#about"
+          onClick={() => setActiveNav("#about")}
+          className={activeNav === "#about" ? "active" : ""}
+          // className={activeSection == 1 ? "active" : ""}
+        >
+          <AiOutlineUser />
+        </a>
+        <a
+          href="#skills"
+          onClick={() => setActiveNav("#skills")}
+          className={activeNav === "#skills" ? "active" : ""}
+          // className={activeSection == 2 ? "active" : ""}
+        >
+          <BiBook />
+        </a>
+        <a
+          href="#showcase"
+          onClick={() => setActiveNav("#showcase")}
+          className={activeNav === "#showcase" ? "active" : ""}
+          // className={activeSection == 3 ? "active" : ""}
+        >
+          <RiServiceLine />
+        </a>
+        <a
+          href="#contact"
+          onClick={() => setActiveNav("#contact")}
+          className={activeNav === "#contact" ? "active" : ""}
+        >
+          <BiMessageSquareDetail />
+        </a>
+      </nav>
+    </Scrollspy>
   );
 };
 

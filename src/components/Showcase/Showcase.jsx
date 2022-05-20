@@ -6,7 +6,7 @@ const Showcase = ({ children }) => {
   
   return (
     <section id="showcase">
-      <h2>My Recent Work</h2>
+      <h2>My recent work</h2>
       <div className="container showcase__container">
         {children}
       </div>
