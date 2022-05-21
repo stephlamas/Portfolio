@@ -21,7 +21,7 @@ const Header = ({
 
   return (
     <section id="home">
-      <header>
+      {/* <header id="home"> */}
         <div className="container header__container" data-aos="zoom-in">
           <h5>Hi there 👋 I'm</h5>
           <h1>{name}</h1>
@@ -41,8 +41,8 @@ const Header = ({
             Scroll Down
           </a>
         </div>
-      </header>
-    </section>
+      {/* </header> */}
+    // </section>
   );
 };
 
