@@ -10,6 +10,10 @@ footer a {
   color: var(--color-bg);
 }
 
+footer a:hover {
+  color: black;
+}
+
 .footer__logo {
   font-size: 2rem;
   font-weight: 500;
@@ -45,11 +49,6 @@ footer a {
   background: transparent;
   color: var(--color-bg);
   border-color: var(--color-bg);
-}
-
-.footer__copyright {
-  margin-bottom: 4rem;
-  color: var(--color-bg);
 }
 
 /* SMALL DEVICES */

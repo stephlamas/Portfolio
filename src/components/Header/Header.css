@@ -10,6 +10,9 @@
   position: relative;
 }
 
+.header__container a:hover {
+  color: var(--color-black);
+}
 
 .cta {
   margin-top: 2rem;
@@ -17,7 +20,6 @@
   gap: 1.2rem;
   justify-content: center;
 }
-
 
 .header__socials {
   display: flex;
@@ -35,7 +37,6 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  margin-top: -1rem;
   border-radius: 12rem 12rem 0 0;
   overflow: hidden;
   padding: 5rem 1.5rem 1.5rem 1.5rem;
@@ -43,6 +44,11 @@
 
 .me img {
   border-radius: 50%;
+  margin-top: -3em;
+}
+.me img:hover {
+  filter: grayscale(100%);
+  transition: var(--transition);
 }
 
 .scroll__down {
@@ -52,6 +58,10 @@
   transform: rotate(90deg);
   font-weight: 300;
   font-size: 0.9rem;
+}
+
+.scroll__down:hover {
+  color: var(--color-primary)
 }
 
 /* MEDIUM DEVICES */

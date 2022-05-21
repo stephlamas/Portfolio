@@ -37,11 +37,12 @@
 
 .about__card {
   background: var(--color-bg-variant);
-  border: 1px solid transparent;
+  border: none;
   border-radius: 1rem;
   padding: 2rem;
   text-align: center;
   transition: var(--transition);
+  height: 9.5rem;
 }
 
 .about__card:hover {
@@ -57,7 +58,7 @@
 }
 
 .about__card h5 {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .about__card small {
@@ -68,6 +69,7 @@
 .about__content p {
   margin: 2rem 0 2.6rem;
   color: var(--color-black);
+  font-size: 0.9rem;
 }
 
 /* MEDIUM DEVICES */

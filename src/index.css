@@ -12,7 +12,6 @@
 
 :root {
   --color-bg: #ffffff;
-  /* --color-bg-variant: #f8d0bd; */
   --color-bg-variant: rgb(251, 212, 219);
   --color-primary: #b372ce;
   --color-primary-variant: rgb(16, 15, 16);
@@ -94,19 +93,14 @@ a:hover {
   color: var(--color-primary);
   padding: 0.75rem 1.2rem;
   border-radius: 0.4rem;
-  cursor: pointer;
   border: 1px solid var(--color-primary);
-  transition: var(--transition);
 }
 
 .btn:hover {
-  background: var(--color-white);
+  background: transparent;
   color: var(--color-black);
   border-color: var(--color-black);
-
 }
-
-
 
 .btn-primary {
   background: var(--color-primary);
@@ -130,7 +124,7 @@ img {
   }
 }
 
-/* ================ MEDIA QUERIES (SMALL DEVICES) ================= */
+/* SMALL DEVICES */
 @media screen and (max-width: 600px) {
   .container {
     width: var(--container-width-sm);

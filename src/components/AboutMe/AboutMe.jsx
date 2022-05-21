@@ -28,7 +28,7 @@ const AboutMe = ({ photoPath, aboutMe, ref }) => {
           <div className="about__cards">
             <article className="about__card">
               <HiOutlineCode className="about__icon" />
-              <h5>Web developer</h5>
+              <h5>Developer</h5>
               <small></small>
             </article>
 
@@ -46,10 +46,6 @@ const AboutMe = ({ photoPath, aboutMe, ref }) => {
           </div>
 
           <p>{aboutMe}</p>
-
-          {/* <a href="#contact" className="btn btn-primary">
-            Let's Talk
-          </a> */}
         </div>
       </div>
     </section>

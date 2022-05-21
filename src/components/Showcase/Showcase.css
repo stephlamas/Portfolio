@@ -8,13 +8,8 @@
   background: var(--color-bg-variant);
   padding: 1.2rem;
   border-radius: 2rem;
-  border: 1px solid transparent;
+  border: none;
   transition: var(--transition);
-}
-
-.showcase__item:hover {
-  border-color: var(--color-primary-variant);
-  background: transparent;
 }
 
 .showcase__item-image {
@@ -35,8 +30,9 @@
 /* MEDIUM DEVICES */
 @media screen and (max-width: 1024px) {
   .showcase__container {
-    grid-template-columns: 1fr 1fr;
-    gap: 1.2rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    /* width: 100%; */
   }
 }
 

@@ -39,10 +39,6 @@ const Footer = ({ linkedinProfileName, githubProfileName, emailAddress }) => {
           <BiMessageSquareDetail />
         </a>
       </div>
-
-      <div className="footer__copyright">
-        <small>&copy; Estefanía Lamas</small>
-      </div>
     </footer>
   );
 };

@@ -9,13 +9,12 @@ const Contact = ({emailAddress}) => {
       <h2>Contact me</h2>
 
       <div className="container contact__container">
-          <article className="contact__option">
-            <MdOutlineEmail className="contact__option-icon" />
-            <h4>Email</h4>
-            <h5>{emailAddress}</h5>
-            <a href={"mailto:" + emailAddress}>Send a message</a>
-          </article>
-        </div>
+        <article className="contact__option">
+          <MdOutlineEmail className="contact__option-icon" />
+          <h4>{emailAddress}</h4>
+          <a href={"mailto:" + emailAddress}>Send a message</a>
+        </article>
+      </div>
     </section>
   );
 };
