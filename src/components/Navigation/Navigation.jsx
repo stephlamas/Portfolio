@@ -19,11 +19,11 @@ const Nav = ({ homeRef, aboutRef, skillsRef, showCaseRef }) => {
 
   return (
     <Scrollspy
-      className="nav"
+      className="scrollspy"
       items={["about", "skills", "showcase", "contact"]}
       currentClassName="isCurrent"
     >
-      <nav>
+      
         <a
           href="#"
           onClick={() => setActiveNav("#")}
@@ -63,7 +63,7 @@ const Nav = ({ homeRef, aboutRef, skillsRef, showCaseRef }) => {
         >
           <BiMessageSquareDetail />
         </a>
-      </nav>
+     
     </Scrollspy>
   );
 };

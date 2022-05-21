@@ -14,7 +14,7 @@ const AboutMe = ({ photoPath, aboutMe, ref }) => {
       Aos.init({ duration: 1000 });
     }, []);
   return (
-    <section id="about" forwardedRef={ref}>>
+    <section id="about">
       <h2>About me</h2>
 
       <div className="container about__container" data-aos="fade-right">
