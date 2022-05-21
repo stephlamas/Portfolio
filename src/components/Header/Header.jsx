@@ -20,27 +20,29 @@ const Header = ({
    }, []);
 
   return (
-    <header>
-      <div className="container header__container" data-aos="zoom-in">
-        <h5>Hi there 👋 I'm</h5>
-        <h1>{name}</h1>
-        <h5>{title}</h5>
-        <CTA emailAddress={emailAddress} />
-        <HeaderSocials
-          linkedinProfileName={linkedinProfileName}
-          githubProfileName={githubProfileName}
-          emailAddress={emailAddress}
-        />
+    <section id="home">
+      <header>
+        <div className="container header__container" data-aos="zoom-in">
+          <h5>Hi there 👋 I'm</h5>
+          <h1>{name}</h1>
+          <h5>{title}</h5>
+          <CTA emailAddress={emailAddress} />
+          <HeaderSocials
+            linkedinProfileName={linkedinProfileName}
+            githubProfileName={githubProfileName}
+            emailAddress={emailAddress}
+          />
 
-        <div className="me">
-          <img src={photoPath} alt={`${name}`} />
+          <div className="me">
+            <img src={photoPath} alt={`${name}`} />
+          </div>
+
+          <a href="#footer" className="scroll__down">
+            Scroll Down
+          </a>
         </div>
-
-        <a href="#footer" className="scroll__down">
-          Scroll Down
-        </a>
-      </div>
-    </header>
+      </header>
+    </section>
   );
 };
 

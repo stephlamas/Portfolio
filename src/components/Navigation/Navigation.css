@@ -15,7 +15,7 @@
   backdrop-filter: blur(18px);
 }
 
-.scrollspy a {
+ a {
   background: transparent;
   padding: 0.9rem;
   border-radius: 50%;
@@ -28,13 +28,7 @@
   background: rgba(0, 0, 0, 0.3);
 }
 
-.scrollspy a.active {
+ .isCurrent {
   background: var(--color-primary);
-  color: var(--color-bg);
-}
-
- .scrollspy.isCurrent a.active {
-  background: var(--color-primary);
-  padding: 2em;
+  color: var(--color-light);
 } 
-
