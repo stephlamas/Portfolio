@@ -38,7 +38,7 @@ const Header = ({
             Scroll Down
           </a>
         </div>
-    </section>
+    //</section>
   );
 };
 
