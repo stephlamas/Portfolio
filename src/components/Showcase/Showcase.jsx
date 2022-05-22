@@ -1,5 +1,4 @@
 import "./Showcase.css";
-import { motion, AnimateSharedLayout } from "framer-motion";
 
 
 const Showcase = ({ children }) => {
