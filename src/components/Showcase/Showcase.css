@@ -17,14 +17,20 @@
   overflow: hidden;
 }
 
+.showcase__item-technologies {
+  font-size: .8em;
+  color: gray;
+  margin-bottom: 1.2em;
+  min-height: 5em;
+}
+
 .showcase__item h3 {
-  margin: 1.2rem 0 2rem;
+  margin: 1.2rem 0 1rem;
 }
 
 .showcase__item-cta {
   display: flex;
   gap: 1rem;
-  margin-bottom: 1rem;
 }
 
 /* MEDIUM DEVICES */
@@ -32,7 +38,6 @@
   .showcase__container {
     grid-template-columns: 1fr;
     gap: 1rem;
-    /* width: 100%; */
   }
 }
 

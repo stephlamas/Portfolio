@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 import "./Portfolio.css";
 import portfolioService from "../../services/portfolio.service";
@@ -10,6 +10,7 @@ import Showcase from "../../components/Showcase/Showcase";
 import Skills from "../../components/Skills/Skills";
 import Contact from "../../components/Contact/Contact";
 import Footer from "../../components/Footer/Footer";
+import Project from "../../components/Project/Project";
 
 const Portfolio = () => {
   
@@ -22,11 +23,6 @@ const Portfolio = () => {
       .catch((err) => console.log(err));
   }, []);
 
-  const homeRef = useRef();
-  const aboutMeRef = useRef();
-  const skillsRef = useRef();
-  const showCaseRef = useRef();
-
   return (
     profile && (
       <>
@@ -37,45 +33,33 @@ const Portfolio = () => {
           linkedinProfileName={profile.linkedinUser}
           githubProfileName={profile.githubUser}
           emailAddress={profile.emailAddress}
-          ref={homeRef}
         />
         <Navigation
           emailAddress={profile.emailAddress}
-          homeRef={homeRef}
-          aboutRef={aboutMeRef}
-          skillsRef={skillsRef}
-          showCaseRef={showCaseRef}
         />
 
         <AboutMe
           photoPath={profile.photoUrl2}
           aboutMe={profile.aboutMe}
-          ref={aboutMeRef}
         />
 
-        <Skills ref={skillsRef} />
+        <Skills />
 
-        <Showcase ref={showCaseRef}>
-          {profile.showcaseProjects.map((p) => (
-            <>
-              <article key={p.title} className="showcase__item">
-                <div className="showcase__item-image">
-                  <img src={p.projectPhoto} alt={p.title} />
-                </div>
-                <h3>{p.title}</h3>
-                <div className="showcase__item-cta">
-                  <a href={p.github} className="btn">
-                    Github
-                  </a>
-                  <a href={p.demo} className="btn btn-primary">
-                    Live Demo
-                  </a>
-                </div>
-              </article>
-            </>
+        <Showcase>
+          {profile.showcaseProjects.map(p => (
+            <Project 
+              title={p.title}
+              githubUrl={p.github}
+              photo={p.projectPhoto}
+              demo={p.demo}
+              description={p.description}
+              technologies={p.technologies}
+            />
           ))}
         </Showcase>
+
         <Contact emailAddress={profile.emailAddress} />
+        
         <Footer
           linkedinProfileName={profile.linkedinUser}
           githubProfileName={profile.githubUser}

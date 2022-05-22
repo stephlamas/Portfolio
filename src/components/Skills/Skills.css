@@ -15,12 +15,6 @@ small {
   border: none;
 }
 
-.skills__container > div:hover {
-  background: transparent;
-  cursor: default;
-  transition: var(--transition);
-}
-
 .skills__container > div h3 {
   text-align: center;
   margin-bottom: 2rem;

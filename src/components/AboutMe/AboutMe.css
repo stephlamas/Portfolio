@@ -37,7 +37,7 @@
 
 .about__card {
   background: var(--color-bg-variant);
-  border: none;
+  /* border: none; */
   border-radius: 1rem;
   padding: 2rem;
   text-align: center;
@@ -49,6 +49,8 @@
   background: transparent;
   border-color: var(--color-primary-variant);
   cursor: default;
+  /* box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.121); */
+  /* border: 2px solid var(--color-primary); */
 }
 
 .about__icon {

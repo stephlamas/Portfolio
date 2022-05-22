@@ -8,7 +8,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 
-const AboutMe = ({ photoPath, aboutMe, ref }) => {
+const AboutMe = ({ photoPath, aboutMe }) => {
 
     useEffect(() => {
       Aos.init({ duration: 1000 });
