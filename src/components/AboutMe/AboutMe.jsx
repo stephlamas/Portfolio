@@ -9,18 +9,16 @@ import "aos/dist/aos.css";
 
 
 const AboutMe = ({ photoPath, aboutMe }) => {
-
     useEffect(() => {
       Aos.init({ duration: 1000 });
     }, []);
   return (
     <section id="about">
       <h2>About me</h2>
-
       <div className="container about__container" data-aos="fade-right">
         <div className="about__me">
           <div className="about__me-image">
-            <img src={photoPath} alt="About Image" />
+            <img src={photoPath} alt="" />
           </div>
         </div>
 

@@ -9,9 +9,9 @@ const Footer = ({ linkedinProfileName, githubProfileName, emailAddress }) => {
 
   return (
     <footer id="footer">
-      <a href="#" className="footer__logo">
+      <h2 className="footer__logo">
         My portfolio
-      </a>
+      </h2>
 
       <ul className="permalinks">
         <li>
