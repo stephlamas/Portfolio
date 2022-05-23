@@ -54,12 +54,16 @@ footer a:hover {
 
 /* SMALL DEVICES */
 @media screen and (max-width: 600px) {
+  footer {
+    height: 100vh;
+  }
   .permalinks {
     flex-direction: column;
     gap: 1.5rem;
+    margin-left: 2em;
   }
 
   .footer__socials {
-    margin-bottom: 2.6rem;
+    margin-bottom: 2rem;
   }
 }
