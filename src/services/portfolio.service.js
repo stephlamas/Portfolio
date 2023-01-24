@@ -1,4 +1,3 @@
-
 const person = {
   name: "Estefanía Lamas",
   emailAddress: "esteflamas@gmail.com",
@@ -8,8 +7,8 @@ const person = {
   photoUrl2: "images/estefania_sm.jpeg",
   photoAboutMe: "images/lofi_girl.jpg",
   aboutMe:
-    "I studied Web Development at Ironhack Madrid, a great place that has helped me discover a field in which I want to develop myself professionally and personally, so I'm focused on keeping learning everyday. I’m also a Translator & Interpreter and have a Bachelor's degree in Teaching English as a Second Language in Secondary Education, but, as life changes, I needed a change. I decided to make use of my level of English to make a career change where this language is so important, and start a new path as a web developer. In my free time, I dedicate myself to my favorite things: photography and my dog.",
-  profession: "WEB DEVELOPER & TRANSLATOR",
+    "Currently starting a new path as a Software Engineer, which is changing my life for the best as it's allowing me to enjoy everyday learning and having fun coding!",
+  profession: "Software developer & translator",
   skills: [
     "../../../images/javascript.png",
     "../../../images/react.png",
@@ -54,11 +53,10 @@ const person = {
 };
 
 class PortfolioService {
-  
-    findProfileByName = (name) => {
-      return new Promise((resolve, reject) => {
-        resolve(person);
-      });
+  findProfileByName = (name) => {
+    return new Promise((resolve, reject) => {
+      resolve(person);
+    });
   };
 }
 

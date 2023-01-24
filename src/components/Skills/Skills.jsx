@@ -5,10 +5,9 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 const Skills = () => {
-
-    useEffect(() => {
-      Aos.init({ duration: 1000 });
-    }, []);
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
 
   return (
     <section id="skills">
@@ -21,6 +20,13 @@ const Skills = () => {
             <article className="skills__details">
               <BsPatchCheckFill className="skills__details-icon" />
               <div>
+                <h4>Javascript</h4>
+                <small>Experienced</small>
+              </div>
+            </article>
+            <article className="skills__details">
+              <BsPatchCheckFill className="skills__details-icon" />
+              <div>
                 <h4>React</h4>
                 <small>Experienced</small>
               </div>
@@ -28,8 +34,8 @@ const Skills = () => {
             <article className="skills__details">
               <BsPatchCheckFill className="skills__details-icon" />
               <div>
-                <h4>JavaScript</h4>
-                <small>Intermediate</small>
+                <h4>RxJs</h4>
+                <small>Experienced</small>
               </div>
             </article>
             <article className="skills__details">
@@ -42,22 +48,15 @@ const Skills = () => {
             <article className="skills__details">
               <BsPatchCheckFill className="skills__details-icon" />
               <div>
-                <h4>Bootstrap</h4>
+                <h4>Jest</h4>
                 <small>Experienced</small>
               </div>
             </article>
             <article className="skills__details">
               <BsPatchCheckFill className="skills__details-icon" />
               <div>
-                <h4>Tailwind</h4>
-                <small >Intermediate</small>
-              </div>
-            </article>
-            <article className="skills__details">
-              <BsPatchCheckFill className="skills__details-icon" />
-              <div>
-                <h4>HTML</h4>
-                <small>Experienced</small>
+                <h4>Tailwind CSS</h4>
+                <small>Intermediate</small>
               </div>
             </article>
           </div>
@@ -77,22 +76,22 @@ const Skills = () => {
             <article className="skills__details">
               <BsPatchCheckFill className="skills__details-icon" />
               <div>
-                <h4>MongoDB</h4>
-                <small >Intermediate</small>
+                <h4>TypeScript</h4>
+                <small>Experienced</small>
+              </div>
+            </article>
+            <article className="skills__details">
+              <BsPatchCheckFill className="skills__details-icon" />
+              <div>
+                <h4>NestJs</h4>
+                <small>Experienced</small>
               </div>
             </article>
             <article className="skills__details">
               <BsPatchCheckFill className="skills__details-icon" />
               <div>
                 <h4>Express</h4>
-                <small >Intermediate</small>
-              </div>
-            </article>
-            <article className="skills__details">
-              <BsPatchCheckFill className="skills__details-icon" />
-              <div>
-                <h4>Mongoose</h4>
-                <small>Intermediate</small>
+                <small>Experienced</small>
               </div>
             </article>
             <article className="skills__details">
@@ -105,7 +104,7 @@ const Skills = () => {
             <article className="skills__details">
               <BsPatchCheckFill className="skills__details-icon" />
               <div>
-                <h4>Cloudinary</h4>
+                <h4>TypeORM</h4>
                 <small>Intermediate</small>
               </div>
             </article>
