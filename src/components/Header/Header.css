@@ -31,6 +31,10 @@
   bottom: 10rem;
 }
 
+.header__socials a {
+  color: var(--color-primary);
+}
+
 .me {
   width: 22rem;
   height: 30rem;
@@ -59,10 +63,11 @@
   transform: rotate(90deg);
   font-weight: 300;
   font-size: 0.9rem;
+  color: var(--color-primary)
 }
 
 .scroll__down:hover {
-  color: var(--color-primary)
+  color: var(--color-black)
 }
 
 /* MEDIUM DEVICES */
